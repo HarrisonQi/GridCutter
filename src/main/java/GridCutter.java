@@ -9,6 +9,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @Author: HarrisonQI
+ * @Email: harrisonqi@foxmail.com
+ */
 public class GridCutter {
 
     public List<BufferedImage> getGirdPics(int xColumns, int yColumns, File file) throws IOException {
