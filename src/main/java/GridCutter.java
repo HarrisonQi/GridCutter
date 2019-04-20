@@ -11,20 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GridCutter {
-    public static void main(String[] args) throws IOException {
-        // sourceRegion(40, 70, 30, 50) (从左向右的坐标, 从上至下的坐标, 从左向右长度, 从上向下长度)
-
-        URL url = new URL("https://file.yihezo.cn/yhz/app/vweb/test_square_1.png");
-
-        GridCutter gridCutter = new GridCutter();
-//       gridCutter.getGirdPics(url);
-        List<BufferedImage> imgs = gridCutter.getGirdPics(3, 3, url);
-        List<String> baseCodes = new ArrayList<>();
-        for (BufferedImage img : imgs) {
-            baseCodes.add(ImgUtils.bufferedImageToBase64(img));
-        }
-        System.out.println(baseCodes);
-    }
 
     public List<BufferedImage> getGirdPics(int xColumns, int yColumns, File file) throws IOException {
         BufferedImage img = ImageIO.read(new FileInputStream(file));
