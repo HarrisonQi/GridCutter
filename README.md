@@ -1,4 +1,4 @@
-#轻松切图
+# 轻松切图
 
 适用场景: 朋友圈发布九张图片、均匀分割一张图片等
 
@@ -16,11 +16,11 @@
     }
 ```
 
-四格切图: gridCutter.getGirdPics(2, 2, url);
+- 四格切图: gridCutter.getGirdPics(2, 2, url);
 
-六格切图: gridCutter.getGirdPics(3, 2, url);
+- 六格切图: gridCutter.getGirdPics(3, 2, url);
 
-九格切图: gridCutter.getGirdPics(3, 3, url);
+- 九格切图: gridCutter.getGirdPics(3, 3, url);
 
 ... 以此类推
 
