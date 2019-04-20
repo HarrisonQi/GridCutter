@@ -1,4 +1,3 @@
-import entity.ImgCo;
 import util.ImgUtils;
 
 import javax.imageio.ImageIO;
@@ -27,17 +26,15 @@ public class GridCutter {
 
         int index = 1;
         for (int i = 1; i <= yColumns; i++) {
-            ImgCo imgCo = new ImgCo();
             int height = img.getHeight();
-            imgCo.setCo2(height / yColumns * i - height / yColumns);
-            imgCo.setLen2(height / yColumns);
+            int posY = height / yColumns * i - height / yColumns;
+            int lenY = height / yColumns;
 
             for (int j = 1; j <= xColumns; j++) {
                 int width = img.getWidth();
-                imgCo.setCo1(width / xColumns * j - width / xColumns);
-                imgCo.setLen1(width / xColumns);
-
-                BufferedImage resImg = img.getSubimage(imgCo.getCo1(), imgCo.getCo2(), imgCo.getLen1(), imgCo.getLen2());
+                int posX = width / xColumns * j - width / xColumns;
+                int lenX = width / xColumns;
+                BufferedImage resImg = img.getSubimage(posX, posY, lenX, lenY);
 
 
                 if (outFolderPath != null) {
